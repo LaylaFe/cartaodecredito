@@ -122,7 +122,7 @@ body{
     flex-direction: column;
 }
 
-.date-block .two-boxes-input{
+.date-block .caixas{
     display: flex;
 }
 
@@ -201,15 +201,16 @@ input:focus{
     cursor: pointer;
 }
 
-.error {
-    border-color: red;
-}
-
-.error-message::after {
-    content: 'Erro na validação';
-    color: red;
-    display: block;
-    font-size: 12px;
+.error { 
+    border-color: red; 
+} 
+.error-message {
+     color: red; 
+     font-size: 12px; 
+     display: none; /* Oculto por padrão */ 
+} 
+.error .error-message {
+     display: block; 
 }
 
 @media screen and (max-width:1023px){

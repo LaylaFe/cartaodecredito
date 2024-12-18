@@ -49,6 +49,7 @@
         <div class="block-1">
           <label for="input-nome">Nome do cartão</label>
           <input type="text" placeholder="e.g. Jane Appleseed" id="input-nome" required>
+          <span class="error-message hidden">Nome inválido.</span>
         </div>
 
         <div class="block-2">
@@ -57,27 +58,30 @@
           oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)"
           maxlength="16"
           minlength="16"
-          id="input-numero" required> 
+          id="input-numero" required>
+          <span class="error-message hidden">NÚMERO inválido.</span> 
         </div>
 
         <div class="block-3">
           <div class="date-block">
             <label for="date-block"> Exp. Date (MM/YY)</label>
             
-              <div class="two-boxes-input">
+              <div class="caixas">
                 <div>
                   <input type="number" placeholder="MM"
                   oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0,maxLength)"
                   minlength="2"
                   maxlength="2"
-                  id="input-mes" required> 
+                  id="input-mes" required>
+                  <span class="error-message hidden">MÊS inválido.</span>
                 </div>
                 <div>
                   <input type="number" placeholder="YY"
                   oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0,maxLength)"
                   minlength="2"
                   maxlength="2"
-                  id="input-ano" required> 
+                  id="input-ano" required>
+                  <span class="error-message hidden">ANO inválido.</span>
                 </div>
               </div>
           </div>
@@ -86,7 +90,8 @@
             <input type="number" placeholder="e.g. 123"
             oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0,maxLength)"
             maxlength="3"
-            id="input-cvc" required> 
+            id="input-cvc" required>
+            <span class="error-message hidden">CVC inválido.</span> 
           </div>
       </div>
         <button id="submit" type="submit">Confirmar</button>
